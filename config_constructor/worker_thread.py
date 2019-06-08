@@ -5,11 +5,12 @@
 import threading
 
 
-def do_something():
-    pass
+def do_something(task):
+    print(task)
+
 
 def get_task(config):
-    return "task"
+    return config.task
 
 
 class MyThread(object):
@@ -18,8 +19,9 @@ class MyThread(object):
         self.threads = []
 
     # 处理线程 读取任务
-    def deal(self, task):
-        do_something()
+    @staticmethod
+    def deal(task):
+        do_something(task)
 
     # 主线程
     def run(self):

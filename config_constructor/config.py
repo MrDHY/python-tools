@@ -15,12 +15,10 @@ class Myconfig(object):
             cf.read(config_file)
 
             self.rds_host = cf.get('redis', 'host')
-            self.rds_port = cf.getint('redis', 'port')
+            self.rds_port = cf.getint('redis', "port")
             self.rds_password = cf.get('redis', 'password')
 
-
-
     def get_rds(self):
-        self.rds = redis.Redis(host=self.rds_host, port=self.rds_port, db=0, password=self.rds_password,
-                               decode_responses=True)
-        return self.rds
+        rds = redis.Redis(host=self.rds_host, port=self.rds_port, db=0, password=self.rds_password,
+                          decode_responses=True)
+        return rds
