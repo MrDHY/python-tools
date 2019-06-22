@@ -1,0 +1,7 @@
+Serializers
+-------------------------------------------------------------------------
+
+.. automodule:: v1.app.my_class
+    :members:
+    :show-inheritance:
+    :undoc-members:

@@ -4,7 +4,7 @@
 
 from celery import Celery
 app = Celery(
-    "demo",
+    "write_pro_doc",
     include=[
         'celery_spider_distribute.spider',
     ]
